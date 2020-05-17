@@ -46,14 +46,15 @@ static unsigned int defaultrcs = 257;
 
 #endif
 
-/*
+/*https://duckduckgo.com/?k7=282a36&k8=f8f8f2&k9=50fa7b&kae=t&kt=p&ks=m&kw=n&km=l&ko=s&kj=282a36&ka=p&kaa=bd93f9&ku=-1&kx=f1fa8c&ky=44475a&kaf=1&kai=1&kf=1
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-//static char *font = "envypn:pixelsize=14:antialias=false:autohint=false";
-static char *font = "terminus:pixelsize=14:antialias=false:autohint=false";
-//static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+// static char *font = "envypn:pixelsize=16:antialias=false:autohint=false";
+// static char *font = "terminus:pixelsize=14:antialias=false:autohint=false";
+// static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "GohuFont:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 0;
 
 /*

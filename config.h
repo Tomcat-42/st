@@ -54,8 +54,19 @@ static unsigned int defaultrcs = 257;
 // static char *font = "envypn:pixelsize=16:antialias=false:autohint=false";
 // static char *font = "terminus:pixelsize=14:antialias=false:autohint=false";
 // static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font = "GohuFont:pixelsize=14:antialias=true:autohint=true";
+//static char *font = "Inconsolata Nerd Font:pixelsize=14:antialias=false:autohint=false";
+/* static char *font = "VictorMono Nerd Font Mono:style=Regular:pixelsize=14:antialias=false:autohint=false"; */
+/* static char *font = "Hasklug Nerd Font:pixelsize=15:antialias=false:autohint=false"; */
+
+
+
+/* static char *font = "GohuFont Nerd Font:pixelsize=15:antialias=true:autohint=true"; */
+static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=false:autohint=false";
+/* static char *font = "Iosevka Custom:pixelsize=16:antialias=false:autohint=false"; */
+//static char *font = "Anonymice Nerd Font:pixelsize=15:antialias=false:autohint=false";
+
 static int borderpx = 0;
+
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -67,6 +78,8 @@ static int borderpx = 0;
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
+/* scroll program: to enable use a string like "scroll" */
+char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -89,6 +102,19 @@ static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
 int allowaltscreen = 1;
+
+/* allow certain non-interactive (insecure) window operations such as:
+   setting the clipboard text */
+int allowwindowops = 0;
+
+/*
+ * draw latency range in ms - from new content/keypress/etc until drawing.
+ * within this range, st draws when content stops arriving (idle). mostly it's
+ * near minlatency, but it waits longer for slow updates to avoid partial draw.
+ * low minlatency will tear/flicker more, as it can "detect" idle too early.
+ */
+static double minlatency = 8;
+static double maxlatency = 33;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
@@ -114,7 +140,7 @@ static unsigned int cursorthickness = 0;
 static int bellvolume = 0;
 
 /* default TERM value */
-char *termname = "st-256color";
+char *termname = "tmux-256color";
 
 /*
  * spaces per tab

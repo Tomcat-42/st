@@ -55,7 +55,7 @@ static unsigned int defaultrcs = 257;
 // static char *font = "terminus:pixelsize=14:antialias=false:autohint=false";
 // static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
 //static char *font = "Inconsolata Nerd Font:pixelsize=14:antialias=false:autohint=false";
-/* static char *font = "VictorMono Nerd Font Mono:style=Regular:pixelsize=14:antialias=false:autohint=false"; */
+//static char *font = "VictorMono Nerd Font Mono:style=Regular:pixelsize=14:antialias=false:autohint=false"; 
 /* static char *font = "Hasklug Nerd Font:pixelsize=15:antialias=false:autohint=false"; */
 
 
@@ -124,14 +124,14 @@ static unsigned int actionfps = 120;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-// static unsigned int blinktimeout = 800;
-static unsigned int blinktimeout = 0;
+static unsigned int blinktimeout = 800;
+//static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors
  */
-// static unsigned int cursorthickness = 2;
-static unsigned int cursorthickness = 0;
+static unsigned int cursorthickness = 2;
+//static unsigned int cursorthickness = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -160,13 +160,22 @@ char *termname = "tmux-256color";
 unsigned int tabspaces = 8;
 
 /*
- * Default shape of cursor
- * 2: Block ("█")
- * 4: Underline ("_")
- * 6: Bar ("|")
- * 7: Snowman ("☃")
- */
-static unsigned int cursorshape = 2;
+* * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
+* Default style of cursor
+* 0: Blinking block
+* 1: Blinking block (default)
+* 2: Steady block ("â–ˆ")
+* 3: Blinking underline
+* 4: Steady underline ("_")
+* 5: Blinking bar
+* 6: Steady bar ("|")
+* 7: Blinking st cursor
+* 8: Steady st cursor
+*/
+//static unsigned int cursorshape = 2;
+
+static unsigned int cursorstyle = 2;
+static Rune stcursor = 0x2603; /* snowman (U+2603) */
 
 /*
  * Default columns and rows numbers

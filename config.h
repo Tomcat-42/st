@@ -62,6 +62,11 @@ static unsigned int defaultrcs = 257;
 
 /* static char *font = "GohuFont Nerd Font:pixelsize=15:antialias=true:autohint=true"; */
 static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=false:autohint=false";
+/* static char *font = "Iosevka:pixelsize=16:antialias=false:autohint=false"; */
+static char *font2[] = {
+	"EmojiOne:pixelsize=10:antialias=true:autohint=true",
+};
+
 /* static char *font = "Iosevka Custom:pixelsize=16:antialias=false:autohint=false"; */
 //static char *font = "Anonymice Nerd Font:pixelsize=15:antialias=false:autohint=false";
 

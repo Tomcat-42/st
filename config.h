@@ -3,7 +3,7 @@
 
 //configurações de cores
 #if pywal
-#include "/home/pablo951_br/.cache/wal/colors-wal-st.h"
+#include "/home/pablo/.cache/wal/colors-wal-st.h"
 #else
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -61,10 +61,11 @@ static unsigned int defaultrcs = 257;
 
 
 /* static char *font = "GohuFont Nerd Font:pixelsize=15:antialias=true:autohint=true"; */
-static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=false:autohint=false";
+static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true";
 /* static char *font = "Iosevka:pixelsize=16:antialias=false:autohint=false"; */
 static char *font2[] = {
-	"EmojiOne:pixelsize=10:antialias=true:autohint=true",
+	//"EmojiOne:pixelsize=10:antialias=true:autohint=true",
+    "Iosevka Term:pixelsize=14:antialias=true:autohint=true"
 };
 
 /* static char *font = "Iosevka Custom:pixelsize=16:antialias=false:autohint=false"; */

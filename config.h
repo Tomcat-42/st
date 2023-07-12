@@ -65,7 +65,7 @@ static char *font = "Iosevka Nerd Font:pixelsize=14:antialias=true:autohint=true
 /* static char *font = "Iosevka:pixelsize=16:antialias=false:autohint=false"; */
 static char *font2[] = {
 	//"EmojiOne:pixelsize=10:antialias=true:autohint=true",
-    "Iosevka Term:pixelsize=14:antialias=true:autohint=true"
+    "IosevkaTerm Nerd Font:pixelsize=14:antialias=true:autohint=true"
 };
 
 /* static char *font = "Iosevka Custom:pixelsize=16:antialias=false:autohint=false"; */
